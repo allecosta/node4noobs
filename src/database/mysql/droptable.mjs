@@ -1,6 +1,6 @@
 import { con } from './db.mjs';
 
-let sql = "DROP TABLE IF EXISTS categories";
+let sql = "DROP TABLE IF EXISTS categories2";
 
 con.query(sql, (error, result) => {
     if (error)
@@ -16,5 +16,5 @@ con.end((error) => {
     if (error)
         throw error;
 
-    console.log('Database connection closed.');
+    //console.log('Database connection closed.');
 });
