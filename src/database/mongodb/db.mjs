@@ -4,10 +4,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const conn = async () => {
-    await mongoose.connect(process.env.MONGODB_URL);
+    try {
+        await mongoose.connect(process.env.MONGODB_URL);    
+    } catch (error) {
+        console.error(error);
+    } 
 }
-
-conn().catch(error => console.log(error));
 
 const customersSchema = new mongoose.Schema({ 
     customerName: String,
@@ -22,7 +24,6 @@ const Customers = mongoose.model('Customers', customersSchema);
 
 const createDatabase = async () => {
   await conn();
-
   await Customers.create({ 
     customerName: 'Alfreds Futterkiste',
     contactName: 'Maria Anders',
@@ -31,10 +32,7 @@ const createDatabase = async () => {
     postalcode: 12209,
     country: 'Germany'  
 });
-
-  /*console.log('WINS! Database created');*/
+    //console.log('WINS! Database created');
 };
 
 createDatabase();
-
-
