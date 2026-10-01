@@ -14,13 +14,11 @@ console.log(`3. Done`);
 
 // Or use Promises
 console.log(`1. Starting read with Promises...`);
-
 fs.readFile(file, 'utf-8')
     .then(data => {
         console.log(`3. File content with Promises:\n ${data}`);
     })
     .catch(error => console.error(error));
-
 console.log(`2. Runs before file read!`);
 
 // Or use Async/Await
