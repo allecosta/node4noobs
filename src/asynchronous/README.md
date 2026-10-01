@@ -17,3 +17,16 @@ This non-blocking approach enables Node.js to handle thousands of concurrent con
 - Better performance
 - More complex to handle
 - Uses callbacks, promises, or async/await
+
+## Promises
+
+*Promises in Node.js provide a cleaner way to handle asynchronous operations compared to traditional callbacks.
+Promises represent the completion (or failure) of an asynchronous operation and its result.*
+
+### Promise States
+
+- Pending: Initial state, operation not completed
+- Fulfilled: Operation completed successfully
+- Rejected: Operation failed
+
+*Once a promise is settled (either fulfilled or rejected), its state cannot change.*
