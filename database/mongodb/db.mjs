@@ -20,7 +20,7 @@ const customersSchema = new mongoose.Schema({
     country: String 
 });
 
-const Customers = mongoose.model('Customers', customersSchema);
+export const Customers = mongoose.model('Customers', customersSchema);
 
 const createDatabase = async () => {
   await conn();
