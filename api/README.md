@@ -20,3 +20,14 @@ PUT	-------> Update a resource completely -------> PUT /api/users/123
 PATCH -------> Update a resource partially -------> PATCH /api/users/123
 DELETE -------> Delete a resource -------> DELETE /api/users/123
 ```
+
+## Project Structure API/v1
+
+- controllers/ -----> Request handlers
+  - userController.js
+- models/ -----> Data models
+  - User.js
+- routes/ -----> Route definitions
+  - users.js
+- app.js -----> Main application 
+- README.md -----> Documentation
