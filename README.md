@@ -2,8 +2,11 @@
 
 - [API](/api/v1/)
     - [Controllers](/api/v1/controllers/)
+    - [Middleware](/api/v1/middleware/)
     - [Models](/api/v1/models/)
     - [Routes](/api/v1/routes/)
+    - [Tests](/api/v1/tests/)
+    - [Utils](/api/v1/utils/)
 - [Asynchronous](/asynchronous/)
     - [Async](/asynchronous/async/)
     - [Async/Await](/asynchronous/async-await/)
