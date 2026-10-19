@@ -3,6 +3,9 @@ const app = express();
 const userRoutes = require('./routes/users');
 const dotenv = require('dotenv');
 
+/*const errorHandler = require('./middleware/errorMiddleware');
+const AppError = require('./utils/errorHandler');*/
+
 dotenv.config();
 
 app.use(express.json());
@@ -12,6 +15,8 @@ app.use('/api/v1/users', userRoutes);
 app.use((req, res) => {
     res.status(404).json({ message: 'OPS! Rota não encontrada' });
 });
+
+/*app.use(errorHandler);*/
 
 // Tratamento global de erros
 app.use((err, req, res, next) => {
